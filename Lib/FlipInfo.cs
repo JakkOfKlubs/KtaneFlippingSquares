@@ -99,6 +99,22 @@ namespace FlippingSquares
                 CenterFromBackwardDiagonal(direction, squares, "→→↑↑↙", 2, -2) ??
                 CenterFromBackwardDiagonal(direction, squares, "→↘↓←↖", 2, 2) ??
                 CenterFromForwardDiagonal(direction, squares, "→↗↑←↙", 2, -2) ??
+                CenterFromLeftRight(direction, squares, "↘↙→→⇑", 2, 2) ??
+                CenterFromLeftRight(direction, squares, "→→↙↙⇒", 2, 2) ??
+                CenterFromUpDown(direction, squares, "↓↓↗↗⇓", 2, 2) ??
+                CenterFromUpDown(direction, squares, "↘↗↓↓⇐", 2, 2) ??
+                CenterFromForwardDiagonal(direction, squares, "↓↘↑↑↘", 2, 2) ??
+                CenterFromBackwardDiagonal(direction, squares, "↑↗↓↓↗", 2, -2) ??
+                CenterFromForwardDiagonal(direction, squares, "←↖↗↘←", -2, -2) ??
+                CenterFromBackwardDiagonal(direction, squares, "←↙→→↙", -2, 2) ??
+                CenterFromLeftRight(direction, squares, "→→↓↙↖", 2, 2) ??
+                CenterFromLeftRight(direction, squares, "→→↑↖↙", 2, -2) ??
+                CenterFromUpDown(direction, squares, "↓↓→↗↖", 2, 2) ??
+                CenterFromUpDown(direction, squares, "↓↓←↖↗", -2, 2) ??
+                CenterFromBackwardDiagonal(direction, squares, "↓→↓→⇑", 2, 2) ??
+                CenterFromBackwardDiagonal(direction, squares, "→↓→↓⇐", 2, 2) ??
+                CenterFromForwardDiagonal(direction, squares, "↑→↑→⇓", 2, -2) ??
+                CenterFromForwardDiagonal(direction, squares, "→↑→↑⇐", 2, -2) ??
 
                 /* 7 */
                 CenterFromLeftRight(direction, squares, "→→↓←←↘", 2, 2) ??
@@ -189,7 +205,7 @@ namespace FlippingSquares
                 {
                     switch (repr[j])
                     {
-                        case '→': x++; break;
+                        case '→': x++; break; 
                         case '←': x--; break;
                         case '↑': y--; break;
                         case '↓': y++; break;
@@ -198,7 +214,7 @@ namespace FlippingSquares
                         case '↙': x--; y++; break;
                         case '↖': x--; y--; break;
                         case '⇒': x += 2; break;
-                        case '⇐': x -= 2; break;
+                        case '⇐': x -= 2; break; 
                         case '⇑': y -= 2; break;
                         case '⇓': y += 2; break;
                     }
